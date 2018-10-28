@@ -1,0 +1,41 @@
+server:
+  port: 9009
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    tomcat:
+      initial-size: 20
+      max-active: 20
+      max-idle: 10
+      min-idle: 1
+      max-wait: -1
+#  data:
+#    mongodb:
+#      uri: mongodb://127.0.0.1:27017/test
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
+---
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    tomcat:
+      initial-size: 20
+      max-active: 20
+      max-idle: 10
+      min-idle: 1
+      max-wait: -1
+#  data:
+#    mongodb:
+#      uri: mongodb://127.0.0.1:27017/test
