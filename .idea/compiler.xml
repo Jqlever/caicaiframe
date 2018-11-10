@@ -9,8 +9,5 @@
         <module name="spring-mongodb-sample" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="spring-mongodb-sample" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
