@@ -17,13 +17,13 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @ApiOperation(value = "查找学生", notes = "通过id查找学生")
-    @ApiImplicitParam(value = "用户id")
-    @GetMapping(value = "/student/{id}")
-    public Student findById(@PathVariable(value = "id") String id) {
-
-        return studentService.findById(id) ;
-    }
+//    @ApiOperation(value = "查找学生", notes = "通过id查找学生")
+//    @ApiImplicitParam(value = "用户id")
+//    @GetMapping(value = "/student/{id}")
+//    public Student findById(@PathVariable(value = "id") String id) {
+//
+//        return studentService.findById(id) ;
+//    }
 
     @GetMapping(value = "/hello/{name}")
     public String hello(@PathVariable(value = "name") String name) {
