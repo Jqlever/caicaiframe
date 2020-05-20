@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deliver') { 
             steps {
-                sh './push_to_sever.sh' 
+                sh 'push_to_sever.sh' 
             }
         }
     }
