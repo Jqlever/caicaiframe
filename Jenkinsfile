@@ -11,5 +11,10 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package' 
             }
         }
+        stage('Deliver') { 
+            steps {
+                sh './push_to_sever.sh' 
+            }
+        }
     }
 }
