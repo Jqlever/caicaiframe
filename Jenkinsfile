@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Deliver') { 
             steps {
+                sh './push_to_sever.sh'
                 sh 'scp root@172.31.161.96:/opt/middleware/jenkins/workspace/caicaiframe/target/spring-mongodb-sample-0.0.1-SNAPSHOT.jar /opt/jar/test'
             }
         }
