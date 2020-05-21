@@ -12,11 +12,8 @@ pipeline {
             }
         }
         stage('Deploy') { 
-            agent none
             steps {
-                script {
-                   sh 'sh deploy_test.sh' 
-                }  
+                sh 'sh deploy_test.sh' 
             }
         }
     }
