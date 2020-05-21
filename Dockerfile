@@ -1,4 +1,4 @@
-FROM kdvolder/jdk8
+FROM kdvolder/jdk8:latest 
 MAINTAINER obu_jcfa003@iflytek.com
 RUN mkdir -p /opt/jar/caicaiframe
 COPY target/spring-mongodb-sample-0.0.1-SNAPSHOT.jar /opt/jar/caicaiframe
