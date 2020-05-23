@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3-alpine' 
-            args '-v /home/.m2/repository:/root/.m2 -v /opt/middleware/maven/apache-maven-3.6.3/conf/settings.xml:/root/.m2/settings.xml --entrypoint=' 
-        }
-    }
+    agent any
     stages {
         stage('Build') { 
             steps {
