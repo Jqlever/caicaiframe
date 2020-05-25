@@ -1,7 +1,7 @@
 pipeline {
     agent { 
         docker {
-            'maven:3-alpine'
+            image 'maven:3-alpine'
             args '-v /opt/middleware/maven/apache-maven-3.6.3/conf/settings.xml:/root/.m2/settings.xml'
         }
     }
