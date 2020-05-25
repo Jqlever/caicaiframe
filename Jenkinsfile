@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sh 'sh deploy_test.sh' 
+                sh 'docker build -t spring-mongodb-sample:0.0.1-SNAPSHOT .' 
             }
         }
     }
