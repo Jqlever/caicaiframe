@@ -1,9 +1,14 @@
 pipeline {
     agent { docker 'maven:3-alpine' }
     stages {
-        stage('build') {
+        stage('Build') { 
             steps {
-                sh 'mvn --version'
+                sh 'mvn -DskipTests clean package' 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                sh 'sh deploy_test.sh' 
             }
         }
     }
