@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    tools {
-       JAVA8
-       maven
-    }
     stages {
         stage('Build') { 
             steps {
